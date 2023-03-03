@@ -220,8 +220,8 @@ class ASCReader(MessageReader):
             # TODO: maybe use regex to parse BRS, ESI, etc?
             msg_kwargs["is_error_frame"] = True
         else:
-            can_id_str, frame_name_or_brs, rest_of_message = rest_of_message.split(
-                None, 2
+            can_id_str, symbolic_name, frame_name_or_brs, rest_of_message = rest_of_message.split(
+                None, 3
             )
 
             if frame_name_or_brs.isdigit():
